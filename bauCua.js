@@ -5,7 +5,7 @@ useId = function (id) {
     return document.getElementById(id)
 }
 var startBauCuaButton, startTaiXiuButton, tu1den6, bton1, bton2, bton3, bton4, bton5, bton6, cricle,
-    hienThiSoTien, bauCuaInput, home, soTien, ss1, ss2, ss3, chams
+    hienThiSoTien, bauCuaInput, home, soTien, ss1, ss2, ss3, chams, confirmElement
 startBauCuaButton = useClassName('startbox2')[0]
 tu1den6 = useClassName('tu1den6')[0]
 bton1 = useId('button1')
@@ -19,6 +19,7 @@ hienThiSoTien = document.getElementsByClassName('hienThiSoTien')[0]
 bauCuaInput = document.getElementsByClassName('bauCuaInput')[0]
 home = document.getElementsByClassName('home')[0]
 bauCuaPlayAgain = document.getElementsByClassName('bauCuaPlayAgain')[0]
+confirmElement = document.getElementsByClassName('bauCuaConfirm')[0]
 
 
 var buttons = [bton1, bton2, bton3, bton4, bton5, bton6], ans
@@ -35,7 +36,7 @@ anPhanTu = function (arr) {
 
 startBauCuaButton.addEventListener('mouseup', function () {
     anPhanTu([startBauCuaButton, startTaiXiuButton])
-    hienThiPhanTu([tu1den6, circle, hienThiSoTien, home])
+    hienThiPhanTu([tu1den6, circle, hienThiSoTien, home, confirmElement])
 })
 
 
@@ -72,31 +73,52 @@ hienThiSucSac = function (numbers) {
     ss3.style.backgroundColor = 'rgb(188, 192, 195)'
 }
 
-var onTarget = 0
-let playerLst = []
-for (let i in buttons) {
-    buttons[i].addEventListener('mouseup', function () {
-        soTien = document.querySelector('#soTien')
-        soTien = parseInt(soTien.textContent)
-        playerLst.push(buttons[i])
-        player = parseInt(i) + 1
-        for (let i in ans) {
-            if (player === ans[i]) {
-                onTarget += 1
+tinhTien2 = function (playerL, answer, tc, st) {
+    for (let i in playerL) {
+        if (!answer.includes(playerL[i])) {
+            st -= tc
+        } else {
+            for (let j in answer) {
+                if (playerL[i] === answer[j]) {
+                    st += tc
+                }
             }
         }
-        bauCuaInput.focus()
-        console.log(player)
-    })
-}
-tinhTien2 = function (ontg, tc, st) {
-    if (ontg === 0) {
-        st -= tc
-    } else {
-        st += tc * ontg
     }
     return st
 }
+console.log(tinhTien2([1, 2, 3, 4, 5, 6], ans, 1, 10))
+console.log(ans)
+
+
+let playerLst = []
+for (let i in buttons) {
+    buttons[i].addEventListener('click', function () {
+        soTien = document.querySelector('#soTien')
+        soTien = parseInt(soTien.textContent)
+        player = parseInt(i) + 1
+        hienThiPhanTu([confirmElement])
+        if (!playerLst.includes(player)) {
+            playerLst.push(player)
+            buttons[i].style.backgroundColor = 'rgb(186,224,183)'
+        } else {
+            buttons[i].style.backgroundColor = 'rgb(177,227,250)'
+            indexToRemove = playerLst.indexOf(player)
+            playerLst.splice(indexToRemove, 1)
+        }
+    })
+}
+
+confirmElement.addEventListener('mouseup', function () {
+    if (playerLst.length === 0) {
+        alert('bạn chưa đặt!')
+    } else {
+        anPhanTu([confirmElement, tu1den6])
+        hienThiPhanTu([bauCuaInput])
+        bauCuaInput.focus()
+    }
+})
+
 bauCuaInput.addEventListener('keydown', function (event) {
     if (event.keyCode === 13) {
         tienCuoc = bauCuaInput.value
@@ -106,29 +128,32 @@ bauCuaInput.addEventListener('keydown', function (event) {
                 tienCuoc = soTien
             }
             hienThiSucSac(ans)
-            soTien = tinhTien2(onTarget, tienCuoc, soTien)
+            soTien = tinhTien2(playerLst, ans, parseInt(tienCuoc), soTien)
             anPhanTu([bauCuaInput])
             hienThiPhanTu([bauCuaPlayAgain, home])
             console.log(soTien)
             soTienElement.innerHTML = soTien
-            onTarget = 0
             ans = tinhKetQua()
         }
     }
 })
 bauCuaPlayAgain.addEventListener('mouseup', function () {
     anPhanTu([bauCuaPlayAgain])
-    hienThiPhanTu([tu1den6])
+    hienThiPhanTu([tu1den6, confirmElement])
     for (let i in chams) {
         chams[i].style.display = 'none'
     }
     ss1.style.backgroundColor = 'rgb(59, 57, 57)'
     ss2.style.backgroundColor = 'rgb(59, 57, 57)'
     ss3.style.backgroundColor = 'rgb(59, 57, 57)'
+    playerLst = []
+    for (let i in buttons) {
+        buttons[i].style.backgroundColor = 'rgb(177,227,250)'
+    }
 })
 
 home.addEventListener('mouseup', function () {
-    anPhanTu([home, circle, bauCuaInput, hienThiSoTien, tu1den6, bauCuaPlayAgain])
+    anPhanTu([home, circle, bauCuaInput, hienThiSoTien, tu1den6, bauCuaPlayAgain, confirmElement])
     hienThiPhanTu([startTaiXiuButton, startBauCuaButton])
     for (let i in chams) {
         chams[i].style.display = 'none'

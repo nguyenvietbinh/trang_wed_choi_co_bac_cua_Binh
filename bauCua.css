@@ -115,3 +115,18 @@
     left: calc(50% - 225px);
     bottom: 20%;
 }
+.bauCuaConfirm {
+    display: none;
+    font-size: 50px;
+    color: rgb(79, 79, 255);
+    height: 70px;
+    border: 5px;
+    border-style: solid;
+    border-color: rgb(79, 79, 255);
+    background-color: rgb(177,227,250); 
+    border-radius: 5%;
+    cursor: pointer;
+    position: absolute;
+    top: 77%;
+    left: calc(50% - 84px);
+}
