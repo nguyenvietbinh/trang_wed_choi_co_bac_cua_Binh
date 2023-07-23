@@ -234,7 +234,7 @@ html {
     bottom: calc(30%);
 }
 .hienThiSoTien {
-    display: none;
+    display: block;
     height: 50px;
     width: 150px;
     background-color: rgb(177,227,250);

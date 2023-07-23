@@ -5,13 +5,13 @@ useId = function (id) {
     return document.getElementById(id)
 }
 var startBauCuaButton, startTaiXiuButton, tu1den6, bton1, bton2, bton3, bton4, bton5, bton6, cricle,
-    hienThiSoTien, bauCuaInput, home, soTien, ss1, ss2, ss3, chams, confirmElement
+    hienThiSoTien, bauCuaInput, home, soTien, ss1, ss2, ss3, chams, confirmElement, runElement
 startBauCuaButton = useClassName('startbox2')[0]
 tu1den6 = useClassName('tu1den6')[0]
 bton1 = useId('button1')
 bton2 = useId('button2')
 bton3 = useId('button3')
-bton4 = useId('button4')
+bton4 = useId('button4') 
 bton5 = useId('button5')
 bton6 = useId('button6')
 circle = document.getElementsByClassName('circle')[0]
@@ -20,6 +20,7 @@ bauCuaInput = document.getElementsByClassName('bauCuaInput')[0]
 home = document.getElementsByClassName('home')[0]
 bauCuaPlayAgain = document.getElementsByClassName('bauCuaPlayAgain')[0]
 confirmElement = document.getElementsByClassName('bauCuaConfirm')[0]
+runElement = document.getElementsByClassName('bauCuaRun')[0]
 
 
 var buttons = [bton1, bton2, bton3, bton4, bton5, bton6], ans
@@ -85,6 +86,9 @@ tinhTien2 = function (playerL, answer, tc, st) {
             }
         }
     }
+    if (st < 0) {
+        return 0
+    }
     return st
 }
 console.log(tinhTien2([1, 2, 3, 4, 5, 6], ans, 1, 10))
@@ -113,23 +117,37 @@ confirmElement.addEventListener('mouseup', function () {
     if (playerLst.length === 0) {
         alert('bạn chưa đặt!')
     } else {
-        anPhanTu([confirmElement, tu1den6])
-        hienThiPhanTu([bauCuaInput])
+        anPhanTu([confirmElement, tu1den6, home])
+        hienThiPhanTu([bauCuaInput, runElement])
         bauCuaInput.focus()
+    }
+})
+runElement.addEventListener('mouseup', function() {
+    tienCuoc = bauCuaInput.value
+    if (kiemTraTienCuoc(tienCuoc, soTien)) {
+        if (tienCuoc === 'all in') {
+            tienCuoc = soTien
+        }
+        hienThiSucSac(ans)
+        soTien = tinhTien2(playerLst, ans, parseInt(tienCuoc), soTien)
+        anPhanTu([bauCuaInput, runElement])
+        hienThiPhanTu([bauCuaPlayAgain, home])
+        console.log(soTien)
+        soTienElement.innerHTML = soTien
+        ans = tinhKetQua()
     }
 })
 
 bauCuaInput.addEventListener('keydown', function (event) {
     if (event.keyCode === 13) {
         tienCuoc = bauCuaInput.value
-        console.log(tienCuoc)
         if (kiemTraTienCuoc(tienCuoc, soTien)) {
             if (tienCuoc === 'all in') {
                 tienCuoc = soTien
             }
             hienThiSucSac(ans)
             soTien = tinhTien2(playerLst, ans, parseInt(tienCuoc), soTien)
-            anPhanTu([bauCuaInput])
+            anPhanTu([bauCuaInput, runElement])
             hienThiPhanTu([bauCuaPlayAgain, home])
             console.log(soTien)
             soTienElement.innerHTML = soTien
@@ -153,7 +171,7 @@ bauCuaPlayAgain.addEventListener('mouseup', function () {
 })
 
 home.addEventListener('mouseup', function () {
-    anPhanTu([home, circle, bauCuaInput, hienThiSoTien, tu1den6, bauCuaPlayAgain, confirmElement])
+    anPhanTu([home, circle, bauCuaInput, tu1den6, bauCuaPlayAgain, confirmElement])
     hienThiPhanTu([startTaiXiuButton, startBauCuaButton])
     for (let i in chams) {
         chams[i].style.display = 'none'

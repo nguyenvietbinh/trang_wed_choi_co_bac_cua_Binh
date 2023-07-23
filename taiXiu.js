@@ -108,6 +108,9 @@ tinhTien = function (boo, tc, st) {
     if (boo) {
         st += (tc * 2 - Math.floor(tc / 100 * 2))
     }
+    if (st < 0) {
+        return 0
+    }
     return st
 }
 var ketQua = tinhKetQua(), tongDiem = ketQua[0] + ketQua[1] + ketQua[2]
@@ -185,6 +188,6 @@ taiXiuPlayAgain.addEventListener('mouseup', function () {
     ss3.style.backgroundColor = 'rgb(13, 14, 59)'
 })
 home.addEventListener('mouseup', function () {
-    anPhanTu([home, circle, taiButton, xiuButton, taiXiuInput, hienThiSoTien])
+    anPhanTu([home, circle, taiButton, xiuButton, taiXiuInput])
     hienThiPhanTu([startTaiXiuButton, startBauCuaButton])
 })

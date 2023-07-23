@@ -2,9 +2,9 @@
     display: block;
     height: 250px;
     width: 700px;
-    background-color: rgb(177,227,250);
+    background-color: rgb(177 ,227,250);
     border: 10px;
-    border-style: solid;
+    border-style: solid; 
     border-color: rgb(79, 79, 255);
     border-radius: 3%;
     cursor: pointer;
@@ -115,6 +115,9 @@
     left: calc(50% - 225px);
     bottom: 20%;
 }
+.bauCuaPlayAgain:hover {
+    background-color: rgb(186,224,183);
+}
 .bauCuaConfirm {
     display: none;
     font-size: 50px;
@@ -129,4 +132,27 @@
     position: absolute;
     top: 77%;
     left: calc(50% - 84px);
+}
+.bauCuaConfirm:hover {
+    background-color: rgb(186,224,183);
+}
+.bauCuaRun {
+    display: none;
+    height: 52px;
+    width: auto;
+    font-size: 25px;
+    background-color: rgb(177,227,250);
+    text-align: center;
+    color: rgb(79, 79, 255);
+    border: 5px;
+    border-color: rgb(79, 79, 255);
+    border-style: solid;
+    border-radius: 5%;
+    cursor: pointer;
+    position: absolute;
+    right: calc(50% - 147px);
+    bottom: 14%;
+}
+.bauCuaRun:hover {
+    background-color: rgb(186,224,183);
 }
