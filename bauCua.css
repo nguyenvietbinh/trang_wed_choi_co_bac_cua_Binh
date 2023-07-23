@@ -6,11 +6,7 @@
     border: 10px;
     border-style: solid; 
     border-color: rgb(79, 79, 255);
-    border-radius: 3%;
-    cursor: pointer;
-    position: absolute;
-    left: calc(50% - 350px);
-    top: 50%;    
+    cursor: pointer;   
 }
 .startbox2:hover {
     background-color: rgb(186,224,183);
@@ -18,9 +14,10 @@
 #getstarted2 {
     color: rgb(79, 79, 255);
     font-size: 330%;
-    position: absolute;
-    left: 10%;
-    top: 22%;
+    margin: 0px;
+    position: relative;
+    left: 0%;
+    top: calc(50% - 30px);
 }
 .tu1den6 {
     display: none;

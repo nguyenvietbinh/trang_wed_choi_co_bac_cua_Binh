@@ -36,7 +36,7 @@ anPhanTu = function (arr) {
 }
 startTaiXiuButton.onmouseup = function () {
     hienThiPhanTu([taiButton, xiuButton, circle, hienThiSoTien, taiXiuInput, home])
-    anPhanTu([startTaiXiuButton, startBauCuaButton])
+    anPhanTu([dialogBoxElment, listOfGame])
     taiXiuInput.focus()
 }
 
@@ -189,5 +189,5 @@ taiXiuPlayAgain.addEventListener('mouseup', function () {
 })
 home.addEventListener('mouseup', function () {
     anPhanTu([home, circle, taiButton, xiuButton, taiXiuInput])
-    hienThiPhanTu([startTaiXiuButton, startBauCuaButton])
+    hienThiPhanTu([dialogBoxElment, listOfGame])
 })

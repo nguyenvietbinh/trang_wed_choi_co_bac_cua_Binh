@@ -5,7 +5,8 @@ useId = function (id) {
     return document.getElementById(id)
 }
 var startBauCuaButton, startTaiXiuButton, tu1den6, bton1, bton2, bton3, bton4, bton5, bton6, cricle,
-    hienThiSoTien, bauCuaInput, home, soTien, ss1, ss2, ss3, chams, confirmElement, runElement
+    hienThiSoTien, bauCuaInput, home, soTien, ss1, ss2, ss3, chams, confirmElement, runElement,
+    dialogBoxElment, listOfGame
 startBauCuaButton = useClassName('startbox2')[0]
 tu1den6 = useClassName('tu1den6')[0]
 bton1 = useId('button1')
@@ -21,6 +22,8 @@ home = document.getElementsByClassName('home')[0]
 bauCuaPlayAgain = document.getElementsByClassName('bauCuaPlayAgain')[0]
 confirmElement = document.getElementsByClassName('bauCuaConfirm')[0]
 runElement = document.getElementsByClassName('bauCuaRun')[0]
+dialogBoxElment = document.getElementsByClassName('dialogBox')[0]
+listOfGame = document.getElementsByClassName('listOfGame')[0]
 
 
 var buttons = [bton1, bton2, bton3, bton4, bton5, bton6], ans
@@ -36,7 +39,7 @@ anPhanTu = function (arr) {
 }
 
 startBauCuaButton.addEventListener('mouseup', function () {
-    anPhanTu([startBauCuaButton, startTaiXiuButton])
+    anPhanTu([dialogBoxElment, listOfGame])
     hienThiPhanTu([tu1den6, circle, hienThiSoTien, home, confirmElement])
 })
 
@@ -172,7 +175,7 @@ bauCuaPlayAgain.addEventListener('mouseup', function () {
 
 home.addEventListener('mouseup', function () {
     anPhanTu([home, circle, bauCuaInput, tu1den6, bauCuaPlayAgain, confirmElement])
-    hienThiPhanTu([startTaiXiuButton, startBauCuaButton])
+    hienThiPhanTu([dialogBoxElment, listOfGame])
     for (let i in chams) {
         chams[i].style.display = 'none'
     }

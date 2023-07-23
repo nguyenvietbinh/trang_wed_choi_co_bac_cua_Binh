@@ -1,6 +1,30 @@
 html {
     background-color: rgb(177,227,250);
 }
+.listOfGame {
+    border: 2px;
+    border-color: rgb(79, 79, 255);
+    border-style: solid;
+    color: rgb(79, 79, 255);
+    font-size: 40px;
+    position: absolute;
+    left: 24%;
+    top: calc(10% - 8px);
+}
+.dialogBox {
+    display: block;
+    width: auto;
+    max-height: 500px;
+    background-color: rgb(177,227,250);
+    transform: translateY(-50%, -50%);
+    border: 10px;
+    border-color: rgb(79, 79, 255);
+    border-style: solid;
+    position: absolute;
+    overflow-y: auto;
+    left: calc(50% - 360px);
+    top: calc(50% - 250px);
+}
 .startbox {
     height: 250px;
     width: 700px;
@@ -8,11 +32,7 @@ html {
     border: 10px;
     border-style: solid;
     border-color: rgb(79, 79, 255);
-    border-radius: 3%;
     cursor: pointer;
-    position: absolute;
-    left: calc(50% - 350px);
-    top: calc(50% - 250px);
 }
 .startbox:hover {
     background-color: rgb(186,224,183);
@@ -20,9 +40,10 @@ html {
 #getstarted {
     color: rgb(79, 79, 255);
     font-size: 330%;
-    position: absolute;
-    left: 10%;
-    top: 22%;
+    margin: 0px;
+    position: relative;
+    left: 0%;
+    top: calc(50% - 30px);
 }
 .tai {
     display: none;
