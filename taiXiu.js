@@ -3,7 +3,7 @@ var startTaiXiuButton, taiButton, xiuButton, circle, ss1, ss2, ss3, chams, winBu
 startTaiXiuButton = document.getElementsByClassName('startbox')[0]
 startBauCuaButton = document.getElementsByClassName('startbox2')[0]
 taiButton = document.getElementsByClassName('tai')[0]
-xiuButton = document.getElementsByClassName('xiu')[0]
+xiuButton = document.getElementsByClassName('xiu')[0] 
 circle = document.getElementsByClassName('circle')[0]
 ss1 = document.getElementsByClassName('sucsac1')[0]
 ss2 = document.getElementsByClassName('sucsac2')[0]

@@ -8,3 +8,14 @@
     border-color: rgb(79, 79, 255);
     cursor: pointer;   
 }
+.startbox3:hover {
+    background-color: rgb(186,224,183);
+}
+#getstarted3 {
+    color: rgb(79, 79, 255);
+    font-size: 330%;
+    margin: 0px;
+    position: relative;
+    left: 0%;
+    top: calc(50% - 30px);
+}

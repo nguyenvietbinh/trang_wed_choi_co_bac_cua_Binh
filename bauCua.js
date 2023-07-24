@@ -24,7 +24,9 @@ confirmElement = document.getElementsByClassName('bauCuaConfirm')[0]
 runElement = document.getElementsByClassName('bauCuaRun')[0]
 dialogBoxElment = document.getElementsByClassName('dialogBox')[0]
 listOfGame = document.getElementsByClassName('listOfGame')[0]
-
+ss1 = document.getElementsByClassName('sucsac1')[0]
+ss2 = document.getElementsByClassName('sucsac2')[0]
+ss3 = document.getElementsByClassName('sucsac3')[0]
 
 var buttons = [bton1, bton2, bton3, bton4, bton5, bton6], ans
 hienThiPhanTu = function (arr) {
@@ -68,13 +70,21 @@ hienThiCacCham = function (arr, num) {
         arr[a[i]].style.display = 'block'
     }
 }
-hienThiSucSac = function (numbers) {
+var cacss = [ss1, ss2, ss3]
+hienThiSucSac2 = function (numbers, playerChoice) {
     for (let i in allCham) {
         hienThiCacCham(allCham[i], numbers[i])
     }
     ss1.style.backgroundColor = 'rgb(188, 192, 195)'
     ss2.style.backgroundColor = 'rgb(188, 192, 195)'
     ss3.style.backgroundColor = 'rgb(188, 192, 195)'
+    for (let i in numbers) {
+        for (let j in playerChoice) {
+            if (numbers[i] === playerChoice[j]) {
+               cacss[i].style.backgroundColor = 'red'
+            }
+        }
+    }
 }
 
 tinhTien2 = function (playerL, answer, tc, st) {
@@ -94,8 +104,6 @@ tinhTien2 = function (playerL, answer, tc, st) {
     }
     return st
 }
-console.log(tinhTien2([1, 2, 3, 4, 5, 6], ans, 1, 10))
-console.log(ans)
 
 
 let playerLst = []
@@ -131,11 +139,10 @@ runElement.addEventListener('mouseup', function() {
         if (tienCuoc === 'all in') {
             tienCuoc = soTien
         }
-        hienThiSucSac(ans)
+        hienThiSucSac2(ans, playerLst)
         soTien = tinhTien2(playerLst, ans, parseInt(tienCuoc), soTien)
         anPhanTu([bauCuaInput, runElement])
         hienThiPhanTu([bauCuaPlayAgain, home])
-        console.log(soTien)
         soTienElement.innerHTML = soTien
         ans = tinhKetQua()
     }
@@ -148,7 +155,9 @@ bauCuaInput.addEventListener('keydown', function (event) {
             if (tienCuoc === 'all in') {
                 tienCuoc = soTien
             }
-            hienThiSucSac(ans)
+            hienThiSucSac2(ans, playerLst)
+            console.log(ans)
+            console.log(playerLst)
             soTien = tinhTien2(playerLst, ans, parseInt(tienCuoc), soTien)
             anPhanTu([bauCuaInput, runElement])
             hienThiPhanTu([bauCuaPlayAgain, home])
