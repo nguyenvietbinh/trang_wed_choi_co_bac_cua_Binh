@@ -19,3 +19,57 @@
     left: 0%;
     top: calc(50% - 30px);
 }
+.dia {
+    display: none;
+    height: 600px;
+    width: 600px;
+    background-color: rgb(223, 223, 223);
+    border: 5px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 50%;
+    position: absolute;
+    left: calc(50% - 300px);
+}
+.bat {
+    display: none;
+    height: 450px;
+    width: 450px;
+    background-color: rgb(181, 181, 181);
+    border: 5px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 50%;
+    position: absolute;
+    left: calc(50% - 225px);
+    top: 75px;
+}
+.xu1, .xu2, .xu3, .xu4 {
+    display: none;
+    text-align: center;
+    font-size: 50px;
+    width: 58px;
+    height: 58px;
+    background-color: white;
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 50%;
+    position: absolute;
+}
+.xoc {
+    display: none;
+    font-size: 50px;
+    color: rgb(79, 79, 255);
+    height: auto;
+    widows: 100px;
+    border: 5px;
+    border-style: solid;
+    border-color: rgb(79, 79, 255);
+    background-color: rgb(177,227,250); 
+    border-radius: 5%;
+    cursor: pointer;
+    position: absolute;
+    top: 650px;
+    left: calc(50% - 60px);
+}
