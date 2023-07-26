@@ -28,7 +28,7 @@
     border-color: black;
     border-style: solid;
     border-radius: 50%;
-    position: absolute;
+    position:  absolute;
     left: calc(50% - 300px);
 }
 .bat {
@@ -39,10 +39,23 @@
     border: 5px;
     border-color: black;
     border-style: solid;
-    border-radius: 50%;
+    border-radius: 45%;
     position: absolute;
     left: calc(50% - 225px);
     top: 75px;
+}
+.dayBat {
+    height: 100px;
+    width: 100px;
+    background-color: rgb(181, 181, 181);
+    border: 35px;
+    border-color: rgb(131, 131, 131);
+    border-style: solid;
+    border-radius: 45%;
+    position: absolute;
+    left: calc(50% - 85px);
+    top: calc(50% - 85px)
+    
 }
 .xu1, .xu2, .xu3, .xu4 {
     display: none;
@@ -72,4 +85,98 @@
     position: absolute;
     top: 650px;
     left: calc(50% - 60px);
+}
+.cacOCuoc {
+    display: none;
+    height: 600px;
+    width: 900px;
+    background-color: rgb(177,227,250);
+    border: 5px;
+    border-style: solid;
+    border-color: rgb(79, 79, 255);
+    position: absolute;
+    left: calc(50% - 450px);
+    top: 30px;
+}
+.chan, .le, ._3n1s, ._3s1n, ._4n, ._4s {
+    display: block;
+    height: 290px;
+    width: 290px;
+    background-color: rgb(160, 182, 192);
+    border: 5px;
+    border-color: rgb(79, 79, 255);
+    border-style: solid;
+    position: absolute;
+}
+.chan, .le {
+    left: 0px;
+}
+._3n1s, ._3s1n {
+    left: 300px;
+}
+._4n, ._4s {
+    right: 0px;
+}
+.chan, ._3n1s, ._4n {
+    top: 0px;
+}
+.le, ._3s1n, ._4s {
+    bottom: 0px;
+}
+.sap {
+    display: block;
+    height: 48px;
+    width: 48px;
+    background-color: rgb(186,224,183);
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 40px;
+    position: absolute;
+}
+.ngua {
+    display: block;
+    height: 48px;
+    width: 48px;
+    background-color: rgb(177,227,250);
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 40px;
+    position: absolute;
+}
+.hang1 {
+    top: 5px;
+}
+.hang2 {
+    top: 60px;
+}
+.hang3 {
+    top: 115px;
+}
+.cot1 {
+    left: 50px;
+}
+.cot2 {
+    left: 100px
+}
+.cot3 {
+    left: 150px;
+}
+.cot4 {
+    left: 200px;;
+}
+.xocDiaInput {
+    display: block;
+    height: 40px;
+    width: 150px;
+    background-color: rgb(210, 237, 250);
+    font-size: 15px;
+    position: absolute;
+    left: 50px;
+    bottom: 30px;
 }

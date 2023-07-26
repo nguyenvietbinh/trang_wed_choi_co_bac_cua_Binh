@@ -17,7 +17,8 @@ html {
     max-height: 500px;
     background-color: rgb(177,227,250);
     transform: translateY(-50%, -50%);
-    border: 1px;
+    border-top: 10px;
+    border-bottom: 10px;
     border-color: rgb(79, 79, 255);
     border-style: solid;
     position: absolute;
