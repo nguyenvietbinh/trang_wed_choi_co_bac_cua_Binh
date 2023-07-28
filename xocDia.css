@@ -180,3 +180,18 @@
     left: 50px;
     bottom: 30px;
 }
+.xocDiaPlayagain {
+    display: none;
+    text-align: center;
+    height: auto;
+    background-color: rgb(177 ,227,250);
+    width: 300px;
+    font-size: 50px;
+    color: rgb(79, 79, 255);
+    border: 5px;
+    border-color: rgb(79, 79, 255);
+    border-style: solid;
+    position: absolute;
+    left: calc(50% - 150px);
+    top: 650px;
+}

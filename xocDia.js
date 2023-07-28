@@ -11,7 +11,9 @@ anPhanTu = function (arr) {
 }
 
 
-var startXocDiaButton, dia, bat, xu1, xu2, xu3, xu4, listOfXu, xoc, cacOCuoc
+var startXocDiaButton, dia, bat, xu1, xu2, xu3, xu4, listOfXu, xoc, cacOCuoc,
+    xocDiaPlayagain, chanInput, leInput, _3s1nInput, _3n1sInput, _4sInput, _4nInput,
+    xocDiaInput
 startXocDiaButton = document.getElementsByClassName('startbox3')[0]
 dia = document.getElementsByClassName('dia')[0]
 bat = document.getElementsByClassName('bat')[0]
@@ -22,6 +24,15 @@ xu4 = document.querySelector('.xu4')
 listOfXu = [xu1, xu2, xu3, xu4]
 xoc = document.querySelector('.xoc')
 cacOCuoc = document.querySelector('.cacOCuoc')
+xocDiaPlayagain = document.querySelector('.xocDiaPlayagain')
+chanInput = document.querySelector('.chanInput')
+leInput = document.querySelector('.leInput')
+_3s1nInput = document.querySelector('._3s1nInput')
+_3n1sInput = document.querySelector('._3n1sInput')
+_4sInput = document.querySelector('._4sInput')
+_4nInput = document.querySelector('._4nInput')
+xocDiaInput = [chanInput, leInput, _3s1nInput, _3n1sInput, _4sInput, _4nInput]
+console.log(xocDiaInput)
 
 
 
@@ -56,8 +67,14 @@ xoc.addEventListener('mouseup', function() {
     hienThiPhanTu([bat, dia])
     hienThiXu()
 })
+xocDiaPlayagain.addEventListener('mouseup', function() {
+    anPhanTu([xocDiaPlayagain, bat, dia])
+    hienThiPhanTu([cacOCuoc, xoc])
+})
+
 bat.addEventListener('mouseup', function() {
     anPhanTu([bat])
+    hienThiPhanTu([xocDiaPlayagain])
 })
 
 home.addEventListener('mouseup', function() {
