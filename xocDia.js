@@ -13,7 +13,7 @@ anPhanTu = function (arr) {
 
 var startXocDiaButton, dia, bat, xu1, xu2, xu3, xu4, listOfXu, xoc, cacOCuoc,
     xocDiaPlayagain, chanInput, leInput, _3s1nInput, _3n1sInput, _4sInput, _4nInput,
-    xocDiaInput
+    xocDiaInput, soTien
 startXocDiaButton = document.getElementsByClassName('startbox3')[0]
 dia = document.getElementsByClassName('dia')[0]
 bat = document.getElementsByClassName('bat')[0]
@@ -32,7 +32,8 @@ _3n1sInput = document.querySelector('._3n1sInput')
 _4sInput = document.querySelector('._4sInput')
 _4nInput = document.querySelector('._4nInput')
 xocDiaInput = [chanInput, leInput, _3s1nInput, _3n1sInput, _4sInput, _4nInput]
-console.log(xocDiaInput)
+soTien = document.querySelector('#soTien')
+soTien = parseInt(soTien.textContent)
 
 
 
@@ -58,8 +59,13 @@ hienThiXu = function() {
 
 
 startXocDiaButton.addEventListener('mouseup', function() {
-    anPhanTu([dialogBoxElment, listOfGame])
-    hienThiPhanTu([xoc, home, cacOCuoc])
+    console.log(soTien)
+    if (soTien >= 8000) {
+        anPhanTu([dialogBoxElment, listOfGame])
+        hienThiPhanTu([xoc, home, cacOCuoc])
+    } else {
+        alert('bạn cần đạt 8000 để mở khoá xóc đĩa!')
+    }
 })
 
 xoc.addEventListener('mouseup', function() {
