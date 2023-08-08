@@ -9,7 +9,36 @@ anPhanTu = function (arr) {
         arr[i].style.display = 'none'
     }
 }
-
+kiemTraTienCuoc = function (str, num) {
+    if (!isNaN(str)) {
+        if (parseInt(str) === 0) {
+            alert('số tiền không hợp lệ, vui lòng nhập lại!')
+            return false
+        }
+        if (str === '') {
+            alert('bạn chưa nhập tiền cược!')
+            return false
+        }
+        if (parseInt(str) > num) {
+            if (num === 0) {
+                alert('bạn đã hết tiền, vui lòng nạp thêm!')
+                return false
+            }
+            alert('số tiền không, đủ vui lòng nạp thêm!')
+            return false
+        }
+    } else if (str === 'all in') {
+        if (num === 0) {
+            alert('bạn đã hết tiền, vui lòng nạp thêm!')
+            return false
+        }
+        return true
+    } else {
+        alert('bạn nhập sai, mời nhập lại!')
+        return false
+    }
+    return true
+}
 
 var startXocDiaButton, dia, bat, xu1, xu2, xu3, xu4, listOfXu, xoc, cacOCuoc,
     xocDiaPlayagain, chanInput, leInput, _3s1nInput, _3n1sInput, _4sInput, _4nInput,
@@ -56,17 +85,28 @@ hienThiXu = function() {
 }
 
 
-
-
 startXocDiaButton.addEventListener('mouseup', function() {
     console.log(soTien)
-    if (soTien >= 8000) {
+    if (soTien >= 1000) {
         anPhanTu([dialogBoxElment, listOfGame])
         hienThiPhanTu([xoc, home, cacOCuoc])
     } else {
         alert('bạn cần đạt 8000 để mở khoá xóc đĩa!')
     }
 })
+
+
+for (let i in xocDiaInput) {
+    xocDiaInput[i].addEventListener('blur', function() {
+        tienCuoc = xocDiaInput[i].textContent
+        if (tienCuoc === '') {
+
+        } else {
+            console.log(123)
+        }
+    })
+}
+
 
 xoc.addEventListener('mouseup', function() {
     anPhanTu([cacOCuoc, xoc])
