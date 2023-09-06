@@ -4,8 +4,8 @@ useClassName = function (className) {
 useId = function (id) {
     return document.getElementById(id)
 }
-var startBauCuaButton, startTaiXiuButton, tu1den6, bton1, bton2, bton3, bton4, bton5, bton6, cricle,
-    hienThiSoTien, bauCuaInput, home, soTien, ss1, ss2, ss3, chams, confirmElement, runElement,
+let startBauCuaButton, tu1den6, bton1, bton2, bton3, bton4, bton5, bton6, cricle,
+    hienThiSoTien, bauCuaInput, home, soTien, confirmElement, runElement,
     dialogBoxElment, listOfGame
 startBauCuaButton = useClassName('startbox2')[0]
 tu1den6 = useClassName('tu1den6')[0]

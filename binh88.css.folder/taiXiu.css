@@ -27,6 +27,7 @@ html {
     top: calc(50% - 250px);
 }
 .startbox {
+    display: block;
     height: 250px;
     width: 700px;
     background-color: rgb(177,227,250);

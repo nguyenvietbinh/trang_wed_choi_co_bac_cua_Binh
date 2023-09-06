@@ -1,5 +1,4 @@
-var startTaiXiuButton, taiButton, xiuButton, circle, ss1, ss2, ss3, chams, winButton, loseButton, taiXiuPlayAgain, taiXiuInput,
-    hienThiSoTien, soTien, tienCuoc, home, startBauCuaButton
+let startTaiXiuButton, taiButton, xiuButton, circle, ss1, ss2, ss3, chams, winButton, loseButton, taiXiuPlayAgain, taiXiuInput, tienCuoc
 startTaiXiuButton = document.getElementsByClassName('startbox')[0]
 startBauCuaButton = document.getElementsByClassName('startbox2')[0]
 taiButton = document.getElementsByClassName('tai')[0]
