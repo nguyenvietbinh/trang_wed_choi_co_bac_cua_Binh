@@ -9,11 +9,12 @@ anPhanTu = function (arr) {
     }
 }
 
-var startXocDiaButton
+let startXocDiaButton, cacOCuoc
 
 startXocDiaButton = document.getElementsByClassName('startbox3')[0]
-
+cacOCuoc = document.querySelector('.cacOCuoc')
+console.log(cacOCuoc)
 startXocDiaButton.addEventListener('mouseup', function () {
     anPhanTu([listOfGame, dialogBoxElment])
-    
+    hienThiPhanTu([cacOCuoc])
 })
