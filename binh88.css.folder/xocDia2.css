@@ -30,16 +30,14 @@
     left: calc(50% - 460px);
     top: 70px;
 }
-.chan, .le, .baDo, .baTrang, .bonDo, .bonTrang {
+.oCuoc {
     width: 300px;
     height: 300px;
     border: 1px;
+    background-color: darkgrey;
     border-style: solid;
     border-color: black;
     position: absolute;
-}
-.chan, .le, .baDo, .baTrang, .bonDo, .bonTrang:hover {
-    background-color: rgb(186,224,183);
 }
 .chan, .baDo, .bonDo {
     top: 0px;
