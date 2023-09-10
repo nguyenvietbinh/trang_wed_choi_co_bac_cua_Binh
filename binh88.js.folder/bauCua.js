@@ -29,16 +29,6 @@ ss2 = document.getElementsByClassName('sucsac2')[0]
 ss3 = document.getElementsByClassName('sucsac3')[0]
 
 var buttons = [bton1, bton2, bton3, bton4, bton5, bton6], ans
-hienThiPhanTu = function (arr) {
-    for (let i in arr) {
-        arr[i].style.display = 'block'
-    }
-}
-anPhanTu = function (arr) {
-    for (let i in arr) {
-        arr[i].style.display = 'none'
-    }
-}
 
 startBauCuaButton.addEventListener('mouseup', function () {
     anPhanTu([dialogBoxElment, listOfGame])

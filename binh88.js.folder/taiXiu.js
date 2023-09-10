@@ -23,16 +23,6 @@ chams3 = chams.slice(14)
 allCham = [chams1, chams2, chams3]
 
 
-hienThiPhanTu = function (arr) {
-    for (let i in arr) {
-        arr[i].style.display = 'block'
-    }
-}
-anPhanTu = function (arr) {
-    for (let i in arr) {
-        arr[i].style.display = 'none'
-    }
-}
 startTaiXiuButton.onmouseup = function () {
     hienThiPhanTu([taiButton, xiuButton, circle, hienThiSoTien, taiXiuInput, home])
     anPhanTu([dialogBoxElment, listOfGame])
