@@ -1,4 +1,5 @@
-let startTaiXiuButton, taiButton, xiuButton, circle, ss1, ss2, ss3, chams, winButton, loseButton, taiXiuPlayAgain, taiXiuInput, tienCuoc
+let startTaiXiuButton, taiButton, xiuButton, circle, ss1, ss2, ss3, chams, winButton,
+    loseButton, taiXiuPlayAgain, taiXiuInput, tienCuoc, soTienElement, soTien
 startTaiXiuButton = document.getElementsByClassName('startbox')[0]
 startBauCuaButton = document.getElementsByClassName('startbox2')[0]
 taiButton = document.getElementsByClassName('tai')[0]
@@ -21,6 +22,8 @@ chams1 = chams.slice(0, 7)
 chams2 = chams.slice(7, 14)
 chams3 = chams.slice(14)
 allCham = [chams1, chams2, chams3]
+soTien = document.querySelector('#soTien')
+soTien = parseInt(soTien.textContent)
 
 
 startTaiXiuButton.onmouseup = function () {
