@@ -49,8 +49,10 @@ xocDiaInputElements[0].addEventListener('blur', function() {
         }
         soTienToDisplay = soTien - tongSoTienCuocXocDia
         soTienElement.innerHTML = soTienToDisplay
+        this.style.border = '1px solid black'
     } else {
-        alert('ban da nhap sai, moi nhap lai!')
+        this.focus()
+        this.style.border = '2px solid red'
     }
 })
 xocDiaInputElements[1].addEventListener('blur', function() {
@@ -65,8 +67,10 @@ xocDiaInputElements[1].addEventListener('blur', function() {
         }
         soTienToDisplay = soTien - tongSoTienCuocXocDia
         soTienElement.innerHTML = soTienToDisplay
+        this.style.border = '1px solid black'
     } else {
-        alert('ban da nhap sai, moi nhap lai!')
+        this.focus()
+        this.style.border = '2px solid red'
     }
 })
 xocDiaInputElements[2].addEventListener('blur', function() {
@@ -81,8 +85,10 @@ xocDiaInputElements[2].addEventListener('blur', function() {
         }
         soTienToDisplay = soTien - tongSoTienCuocXocDia
         soTienElement.innerHTML = soTienToDisplay
+        this.style.border = '1px solid black'
     } else {
-        alert('ban da nhap sai, moi nhap lai!')
+        this.focus()
+        this.style.border = '2px solid red'
     }
 })
 xocDiaInputElements[3].addEventListener('blur', function() {
@@ -97,8 +103,10 @@ xocDiaInputElements[3].addEventListener('blur', function() {
         }
         soTienToDisplay = soTien - tongSoTienCuocXocDia
         soTienElement.innerHTML = soTienToDisplay
+        this.style.border = '1px solid black'
     } else {
-        alert('ban da nhap sai, moi nhap lai!')
+        this.focus()
+        this.style.border = '2px solid red'
     }
 })
 xocDiaInputElements[4].addEventListener('blur', function() {
@@ -113,8 +121,10 @@ xocDiaInputElements[4].addEventListener('blur', function() {
         }
         soTienToDisplay = soTien - tongSoTienCuocXocDia
         soTienElement.innerHTML = soTienToDisplay
+        this.style.border = '1px solid black'
     } else {
-        alert('ban da nhap sai, moi nhap lai!')
+        this.focus()
+        this.style.border = '2px solid red'
     }
 })
 xocDiaInputElements[5].addEventListener('blur', function() {
@@ -129,7 +139,9 @@ xocDiaInputElements[5].addEventListener('blur', function() {
         }
         soTienToDisplay = soTien - tongSoTienCuocXocDia
         soTienElement.innerHTML = soTienToDisplay
+        this.style.border = '1px solid black'
     } else {
-        alert('ban da nhap sai, moi nhap lai!')
+        this.focus()
+        this.style.border = '2px solid red'
     }
 })

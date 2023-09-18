@@ -89,6 +89,11 @@
     background-color: rgb(215, 215, 215);
     color: black;
     font-size: large;
+    border: 1px solid black;
+    cursor: pointer;
+}
+.nhapTienCuocXocDia:focus {
+    outline: 1px solid rgb(177,227,250);
 }
 .batDauXoc {
     display: none;
@@ -100,6 +105,25 @@
 }
 .dia {
     display: none;
+    position: absolute;
+    left: calc(50% - 205px);
+    top: 100px;
+}
+.xus {
+    display: none;
+    height: 404px;
+    width: 410px;
+    position: absolute;
+    left: calc(50% - 205px);
+    top: 100px;
+}
+.bat {
+    display: none;
+    width: 300px;
+    height: 298px;
+}
+.do1 {
     position: relative;
-    left: calc(50% - 250px);
+    top: 250px;
+    left: 250px;
 }
