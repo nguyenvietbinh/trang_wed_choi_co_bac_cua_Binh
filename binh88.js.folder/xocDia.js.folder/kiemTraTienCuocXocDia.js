@@ -20,12 +20,10 @@ kiemTraKieuDuLieu = function (variableToCheck, limmit) {
 kiemTraNguoiChoiDaDatCuocChua = function(lstToCheck) {
     let ans = true, d = 0
     for (let i in lstToCheck) {
-        if (isNaN(lstToCheck[i])) {
-            ans = false
-        } else if (lstToCheck[i] === 0) {
-            d = d + 1
-        } else if (!kiemTraKieuDuLieu(lstToCheck[i], soTienToDisplay)) {
-            ans = false
+        if ((lstToCheck[i] === '') || (lstToCheck[i] == 0)) {
+            d += 1
+        } else if (xocDiaInputElements[i].style.borderColor === 'red') {
+            return false
         }
     }
     if (d === 6) {
@@ -36,6 +34,7 @@ kiemTraNguoiChoiDaDatCuocChua = function(lstToCheck) {
 let soTienToDisplay = soTien, chanTienCuoc = 0, leTienCuoc = 0, baDoTienCuoc = 0, baTrangTienCuoc = 0,
     bonDoTienCuoc = 0, bonTrangTienCuoc = 0, xocDiaTienCuoc = [chanTienCuoc, leTienCuoc, baDoTienCuoc,
     baTrangTienCuoc, bonDoTienCuoc, bonTrangTienCuoc]
+    
 
 xocDiaInputElements[0].addEventListener('blur', function() {
     let tongSoTienCuocXocDia = 0

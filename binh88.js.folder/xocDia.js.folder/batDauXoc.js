@@ -11,7 +11,7 @@ bat = document.querySelector('.bat')
 batDauXoc.addEventListener('mouseup', function() {
     if (kiemTraNguoiChoiDaDatCuocChua(xocDiaTienCuoc)) {
         anPhanTu([cacOCuoc, batDauXoc])
-        hienThiPhanTu([dia, xus, bat])
+        hienThiPhanTu([dia])
     } else {
         alert('tien cuoc khong hop le!')
     }
