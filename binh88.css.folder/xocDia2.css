@@ -104,26 +104,42 @@
     top: 700px;
 }
 .dia {
-    display: none;
+    display: block;
+    height: 500px;
+    width: auto;
     position: absolute;
-    left: calc(50% - 205px);
-    top: 100px;
+    left: 0px;
+    top: 0px;
 }
-.xus {
+.batDia {
     display: none;
-    height: 404px;
-    width: 410px;
+    width: 500px;
+    height: 500px;
     position: absolute;
-    left: calc(50% - 205px);
-    top: 100px;
+    left: calc(50% - 250px);
+    top: 150px;
 }
 .bat {
     display: none;
-    width: 300px;
-    height: 298px;
+    width: 420px;
+    height: 420px;
+    position: relative;
+    top: calc(50% - 205px);
+    left: calc(50% - 210px);
 }
 .do1 {
     position: relative;
     top: 250px;
     left: 250px;
+}
+.test {
+    display: none;
+    width: 34px;
+    height: 44px;
+    background-color: black;
+    position: absolute;
+}
+.xu {
+    display: none;
+    position: absolute;
 }

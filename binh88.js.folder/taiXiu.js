@@ -1,5 +1,5 @@
 let startTaiXiuButton, taiButton, xiuButton, circle, ss1, ss2, ss3, chams, winButton,
-    loseButton, taiXiuPlayAgain, taiXiuInput, tienCuoc, soTienElement, soTien
+    loseButton, taiXiuPlayAgain, taiXiuInput, tienCuoc, soTienElement, soTien, chanTrang
 startTaiXiuButton = document.getElementsByClassName('startbox')[0]
 startBauCuaButton = document.getElementsByClassName('startbox2')[0]
 taiButton = document.getElementsByClassName('tai')[0]
@@ -17,6 +17,7 @@ taiXiuInput = document.getElementsByClassName('taiXiuInput')[0]
 hienThiSoTien = document.getElementsByClassName('hienThiSoTien')[0]
 soTienElement = document.getElementById('soTien')
 home = document.getElementsByClassName('home')[0]
+chanTrang = document.querySelector('.footer')
 var chams1, chams2, chams3
 chams1 = chams.slice(0, 7)
 chams2 = chams.slice(7, 14)
@@ -28,7 +29,7 @@ soTien = parseInt(soTien.textContent)
 
 startTaiXiuButton.onmouseup = function () {
     hienThiPhanTu([taiButton, xiuButton, circle, hienThiSoTien, taiXiuInput, home])
-    anPhanTu([dialogBoxElment, listOfGame])
+    anPhanTu([dialogBoxElment, listOfGame, chanTrang])
     taiXiuInput.focus()
 }
 
@@ -181,5 +182,5 @@ taiXiuPlayAgain.addEventListener('mouseup', function () {
 })
 home.addEventListener('mouseup', function () {
     anPhanTu([home, circle, taiButton, xiuButton, taiXiuInput])
-    hienThiPhanTu([dialogBoxElment, listOfGame])
+    hienThiPhanTu([dialogBoxElment, listOfGame, chanTrang])
 })

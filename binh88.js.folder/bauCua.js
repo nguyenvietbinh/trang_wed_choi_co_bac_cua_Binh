@@ -31,7 +31,7 @@ ss3 = document.getElementsByClassName('sucsac3')[0]
 var buttons = [bton1, bton2, bton3, bton4, bton5, bton6], ans
 
 startBauCuaButton.addEventListener('mouseup', function () {
-    anPhanTu([dialogBoxElment, listOfGame])
+    anPhanTu([dialogBoxElment, listOfGame, chanTrang])
     hienThiPhanTu([tu1den6, circle, hienThiSoTien, home, confirmElement])
 })
 

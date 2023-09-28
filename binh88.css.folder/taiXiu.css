@@ -297,3 +297,21 @@ html {
 .home:hover {
     background-color: rgb(186,224,183);
 }
+footer {
+    height: 150px;
+    width: 100%;
+    background-color: rgb(133, 146, 158);
+    color: #fff;
+    padding: 20px 0;
+    text-align: left;
+    position: absolute;
+    top: 800px;
+}
+.chanTrang {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.noiDungChanTrang {
+  display: flex;
+  flex-direction: column;
+}
