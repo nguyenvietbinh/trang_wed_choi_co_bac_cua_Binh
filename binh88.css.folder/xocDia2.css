@@ -127,6 +127,10 @@
     top: calc(50% - 205px);
     left: calc(50% - 210px);
 }
+img.bat {
+    user-select: none;
+    -webkit-user-drag: none;
+}
 .do1 {
     position: relative;
     top: 250px;

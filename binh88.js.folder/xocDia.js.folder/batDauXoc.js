@@ -1,4 +1,4 @@
-let xocDiaInputs, xocDiaInputElements, dia, xus, bat, test, batDia,
+let xocDiaInputs, xocDiaInputElements, dia, xus, bat, test, batDia, answer, 
     chanInput, leInput, baDoInput, baTrangInput, bonDoInput, boTrangInput
 xocDiaInputs = [chanInput, leInput, baDoInput, baTrangInput, bonDoInput, boTrangInput]
 
@@ -7,17 +7,16 @@ batDauXoc = document.querySelector('.batDauXoc')
 dia = document.querySelector('.dia')
 xus = document.querySelector('.xus')
 bat = document.querySelector('.bat')
-test = document.querySelectorAll('.test')
 batDia = document.querySelector('.batDia')
 
 
 batDauXoc.addEventListener('mouseup', function() {
     if (kiemTraNguoiChoiDaDatCuocChua(xocDiaTienCuoc)) {
         anPhanTu([cacOCuoc, batDauXoc])
-        hienThiPhanTu([batDia])
-        let answer = randomCacDongXu()
+        hienThiPhanTu([batDia, bat])
+        answer = randomCacDongXu()
+        test()
         cacDongXuDuocHienThi = chonCacDongXuDuocHienThi(answer)
-        console.log(cacDongXuDuocHienThi)
         for (let i of cacDongXuDuocHienThi) {
             let ans = getRandomPos()
             i.style.display = 'block'
