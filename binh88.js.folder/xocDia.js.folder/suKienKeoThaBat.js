@@ -1,5 +1,7 @@
 
-let keoTha = false
+let keoTha = false, toaDoBanDauX, toaDoBanDauY
+toaDoBanDauX = bat.offsetLeft
+toaDoBanDauY = bat.offsetTop
 
 bat.addEventListener('mousedown', function(event) {
     mouseX = event.clientX

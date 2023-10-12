@@ -35,7 +35,13 @@ let soTienToDisplay = soTien, chanTienCuoc = 0, leTienCuoc = 0, baDoTienCuoc = 0
     bonDoTienCuoc = 0, bonTrangTienCuoc = 0, xocDiaTienCuoc = [chanTienCuoc, leTienCuoc, baDoTienCuoc,
     baTrangTienCuoc, bonDoTienCuoc, bonTrangTienCuoc]
     
+ 
 
+for (let i in xocDiaInputElements) {
+    console.log(i)
+}
+
+    
 xocDiaInputElements[0].addEventListener('blur', function() {
     let tongSoTienCuocXocDia = 0
     xocDiaTienCuoc[0] = this.value
@@ -53,6 +59,7 @@ xocDiaInputElements[0].addEventListener('blur', function() {
         this.focus()
         this.style.border = '2px solid red'
     }
+    soTienToDisplay = soTien
 })
 xocDiaInputElements[1].addEventListener('blur', function() {
     let tongSoTienCuocXocDia = 0
@@ -71,6 +78,7 @@ xocDiaInputElements[1].addEventListener('blur', function() {
         this.focus()
         this.style.border = '2px solid red'
     }
+    soTienToDisplay = soTien
 })
 xocDiaInputElements[2].addEventListener('blur', function() {
     let tongSoTienCuocXocDia = 0
@@ -89,6 +97,7 @@ xocDiaInputElements[2].addEventListener('blur', function() {
         this.focus()
         this.style.border = '2px solid red'
     }
+    soTienToDisplay = soTien
 })
 xocDiaInputElements[3].addEventListener('blur', function() {
     let tongSoTienCuocXocDia = 0
@@ -107,6 +116,7 @@ xocDiaInputElements[3].addEventListener('blur', function() {
         this.focus()
         this.style.border = '2px solid red'
     }
+    soTienToDisplay = soTien
 })
 xocDiaInputElements[4].addEventListener('blur', function() {
     let tongSoTienCuocXocDia = 0
@@ -125,6 +135,7 @@ xocDiaInputElements[4].addEventListener('blur', function() {
         this.focus()
         this.style.border = '2px solid red'
     }
+    soTienToDisplay = soTien
 })
 xocDiaInputElements[5].addEventListener('blur', function() {
     let tongSoTienCuocXocDia = 0
@@ -143,4 +154,5 @@ xocDiaInputElements[5].addEventListener('blur', function() {
         this.focus()
         this.style.border = '2px solid red'
     }
+    soTienToDisplay = soTien
 })

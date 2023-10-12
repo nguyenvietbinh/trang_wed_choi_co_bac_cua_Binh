@@ -33,6 +33,16 @@ startTaiXiuButton.onmouseup = function () {
     taiXiuInput.focus()
 }
 
+sumOfList = function(lst) {
+    sum = 0
+    for (let i of lst) {
+        if (i === '') {
+            i = 0
+        }
+        sum += i
+    }
+    return sum
+}
 kiemTraTienCuoc = function (str, num) {
     if (!isNaN(str)) {
         if (parseInt(str) === 0) {
