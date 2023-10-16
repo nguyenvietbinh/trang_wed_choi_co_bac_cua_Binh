@@ -29,6 +29,7 @@ batDauXoc.addEventListener('mouseup', function() {
                 gocNgauNhien = getRandomInRange(0, 360)
                 i.style.transform = `rotate(${gocNgauNhien}deg)`
             }
+            anPhanTu([home])
         } else {
             alert('tien cuoc khong hop le!')
         }

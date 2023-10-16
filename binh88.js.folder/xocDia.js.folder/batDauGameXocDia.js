@@ -6,5 +6,8 @@ cacOCuoc = document.querySelector('.cacOCuoc')
 batDauXoc = document.querySelector('.batDauXoc')
 startXocDiaButton.addEventListener('mouseup', function () {
     anPhanTu([listOfGame, dialogBoxElment, chanTrang])
-    hienThiPhanTu([cacOCuoc, batDauXoc])
+    hienThiPhanTu([cacOCuoc, batDauXoc, home])
+})
+home.addEventListener('mouseup', function() {
+    anPhanTu([home, cacOCuoc, batDauXoc])
 })

@@ -13,7 +13,7 @@ tinhTienCuocChan = function(tienCuoc, numberOfRed) {
         return 0
     }
     if (numberOfRed === 0 || numberOfRed === 2 || numberOfRed === 4) {
-        tienCuoc = Math.floor(tienCuoc*0.98)
+        tienCuoc = Math.floor(tienCuoc*1.98)
         return tienCuoc
     }else {
         return 0
@@ -24,7 +24,7 @@ tinhTienCuocLe = function(tienCuoc, numberOfRed) {
         return 0
     }
     if (numberOfRed === 1 || numberOfRed === 3) {
-        tienCuoc = Math.floor(tienCuoc*0.98)
+        tienCuoc = Math.floor(tienCuoc*1.98)
         return tienCuoc
     }else {
         return 0
@@ -35,7 +35,7 @@ tinhTienCuocBaDo = function(tienCuoc, numberOfRed) {
         return 0
     }
     if (numberOfRed === 3) {
-        tienCuoc = Math.floor(tienCuoc*2.6)
+        tienCuoc = Math.floor(tienCuoc*3.6)
         return tienCuoc
     }else {
         return 0
@@ -46,7 +46,7 @@ tinhTienCuocBaTrang = function(tienCuoc, numberOfRed) {
         return 0
     }
     if (numberOfRed === 1) {
-        tienCuoc = Math.floor(tienCuoc*2.6)
+        tienCuoc = Math.floor(tienCuoc*3.6)
         return tienCuoc
     }else {
         return 0
@@ -57,7 +57,7 @@ tinhTienCuocBonDo = function(tienCuoc, numberOfRed) {
         return 0
     }
     if (numberOfRed === 4) {
-        tienCuoc = Math.floor(tienCuoc*12)
+        tienCuoc = Math.floor(tienCuoc*13)
         return tienCuoc
     }else {
         return 0
@@ -68,7 +68,7 @@ tinhTienCuocBonTrang = function(tienCuoc, numberOfRed) {
         return 0
     }
     if (numberOfRed === 0) {
-        tienCuoc = Math.floor(tienCuoc*12)
+        tienCuoc = Math.floor(tienCuoc*13)
         return tienCuoc
     }else {
         return 0
@@ -86,12 +86,13 @@ bat.addEventListener('mouseup', function() {
     tienThuong += tinhTienCuocBonDo(xocDiaInputs[4], numberOfRed)
     tienThuong += tinhTienCuocBonTrang(xocDiaInputs[5], numberOfRed)
     soTien += tienThuong
+    console.log(tienThuong)
     soTienElement.innerHTML = soTien
     hienThiPhanTu([xocDiaPlayAgain])
 })
 xocDiaPlayAgain.addEventListener('click', function() {
     anPhanTu([xocDiaPlayAgain, batDia])
-    hienThiPhanTu([cacOCuoc, batDauXoc])
+    hienThiPhanTu([cacOCuoc, batDauXoc, home])
     for (let i of xocDiaInputElements) {
         i.value = ''
     }
